@@ -1,0 +1,32 @@
+<style>
+    button{
+        margin-top: 10vh;
+        margin-left: 10vh;
+        width:5rem;
+        background-color: black;
+        color: greenyellow;
+    }
+    table{
+        margin-left: 10vh;
+        border: 2px solid black;
+        background-color: black ;
+        color:greenyellow
+    }
+</style>
+
+<%- include('./partials/footer.ejs')%>
+<h1>Welcome to Customer page</h1>
+<table border="1px">
+   <tr>
+    <th>ID</th>
+    <th>NAME</th>
+   </tr>
+   <%data.forEach((cust)=>{%>
+    <tr>
+        <td><%=cust.id%></td>
+        <td><%=cust.name%></td>
+    </tr>
+   <% })%>
+</table>
+
+<button onclick="addCustomer()">ADD</button>
